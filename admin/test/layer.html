@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="/assets/vendors/jquery.1.11.js"></script>
+    <script type="text/javascript" src="/assets/vendors/layer/layer.js"></script>
+</head>
+<body>
+<div id="d" style="display: none">aaaaaaaaaaaa</div>
+<script type="text/javascript">
+layer.ready(function(){ 
+  /*layer.open({
+    type: 2,
+    title: '欢迎页 --- index.html',
+    maxmin: false,
+    //time: 1000, //1秒后自动关闭弹出层
+    //offset: ['10px', '20px'],
+    //icon:3,
+    area: ['800px', '500px'],
+    content: '/index.html',
+  });*/
+
+  /**
+   * 警告框
+   * 参数1: 警告的提示文字
+   * 参数2: 可选参数，对象，警告框的配置项，大多数配置项在这里都能用
+   * 参数3: 可选参数，回调函数，在点击确定按钮时触发的回调函数。
+   *        该函数中有一个参数，就是当前弹出框的索引值
+   *
+   * 可以调用layer.close方法关闭弹出层，close方法需要要被关闭的弹出层的索引作为参数
+   */
+  /*layer.alert('警告，警告....', {icon:0, title:'警告框测试', area:['300px', '200px']}, function (index) {
+    console.log('aaaaaaaaa');
+    layer.close(index);
+  });*/
+
+
+  /**
+   * 提示框
+   * 参数1: 提示框的文字
+   * 参数2: 可选参数，对象，提示框的配置项
+   * 参数3: 可选参数，回调函数，点击“确定”时触发的回调函数
+   */
+  /*layer.confirm('您确定删除该数据吗?', {icon:3}, function (index) {
+    console.log('confirm');
+    layer.close(index);
+  });*/
+
+  /**
+   * 消息框
+   * 参数1: 消息框的文字
+   * 参数2: 可选参数，对象，提示框的配置项
+   * 参数3: 可选参数，回调函数，自动关闭消息框后触发的回调函数时
+   */
+  layer.msg('只想弱弱提示', {time:2000, area:['300px', '50px']}, function () {
+    console.log('msg关闭了，然后我来了')
+  });
+
+
+  /*layer.prompt({
+      formType: 0,    //0 单行文本框   1 密码框  2 多行文本框
+      value: '初始值',   // 文本框中的初始文字
+      title: '请输入值'  // 标题栏
+    }, function(value, index, elem){
+      //参数1(value): 就是文本框输入的内容
+      //参数2(index): 就是当前弹出框的索引
+      //参数3(elem): 就是当前弹出层对象
+      alert(value); //得到value
+      layer.close(index);
+      console.log(elem);
+    });*/
+
+    
+  });
+</script>
+</body>
+</html>

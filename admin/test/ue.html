@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="/assets/vendors/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="/assets/vendors/ueditor/third-party/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/assets/vendors/ueditor/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/assets/vendors/ueditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="/assets/vendors/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<!-- 使用css样式直接修改宽高 -->
+<textarea id="content"></textarea>
+
+
+<script type="text/javascript">
+//在实例化富文本编辑器时，可以使用参数2来自定义富文本编辑器的样式
+var um = UM.getEditor('content', {
+    //自定义富文本编辑器的宽高
+    initialFrameWidth:800,
+    initialFrameHeight:300,
+    //富文本编辑器中默认显示的内容
+    initialContent:'欢迎使用UMEDITOR!',
+    //是否显示编辑器
+    isShow : true,
+    //工具栏 --- 通过字符串来配置工具栏显示哪些工具
+    toolbar:[
+            'source | undo redo | bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',
+            'insertorderedlist insertunorderedlist | selectall cleardoc paragraph | fontfamily fontsize' ,
+            '| justifyleft justifycenter justifyright justifyjustify |',
+            'link unlink | emotion image video  | map',
+            '| horizontal print preview fullscreen', 'drafts', 'formula'
+        ]
+});
+</script>
+</body>
+</html>

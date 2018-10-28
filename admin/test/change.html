@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+onchange事件: 基本上只用在两个地方，
+    1 下来菜单（select）: 每当下拉菜单中的内容发生改变时触发该事件
+    2 文件域的改变: 每当文件域中选中的文件发生改变，则触发该事件
+-->
+
+<select id="s">
+    <option>北京</option>
+    <option>上海</option>
+    <option>广州</option>
+    <option>深圳</option>
+</select>
+
+<script type="text/javascript">
+document.getElementById('s').onchange = function () {
+    alert(123);
+}
+</script>
+
+<input type="file" id="f">
+<script type="text/javascript">
+document.getElementById('f').onchange = function () {
+    alert(234);
+}
+</script>
+
+</body>
+</html>
